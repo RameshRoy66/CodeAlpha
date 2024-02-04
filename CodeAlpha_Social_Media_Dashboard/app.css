@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #00DBDE;
+    background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+
+    background-size:cover;
+    bac
+    color: #262626; /* Text color */
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #D9AFD9;
+    background-image: linear-gradient(0deg, #D9AFD9 0%,#00DBDE  100%);
+    border-radius: 20px; /* Add border radius for a smoother look */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+h1, h2 {
+    text-align: center;
+    color: #262626;
+}
+
+.feed-container {
+    margin-top: 30px;
+}
+
+.post-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.post-card {
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+    background-color: #ffffff; /* Post card background color */
+    border-radius: 20px; /* Add border radius to post cards */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow to post cards */
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.login-container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff; /* Login container background color */
+}
+
+.login-form {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+/* Button styles */
+.btn {
+    background-color: #4caf50; /* Green */
+    color: #fff; /* Text color for buttons */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #45a049; /* Darker shade of green on hover */
+}
+
+/* Input styles */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #4caf50; /* Green on focus */
+}

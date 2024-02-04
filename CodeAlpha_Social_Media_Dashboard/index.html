@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Dashboard</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #00DBDE;
+    background-image: url('./images/img3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #262626;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-image: url('./images/img2.svg');
+
+    background-color: #000000;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(246, 227, 227, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #00DBDE;
+    font-weight: 1000;
+}
+
+.feed-container {
+    margin-top: 30px;
+}
+
+.post-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.post-card {
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.1);
+}
+
+.login-container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.login-form {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.btn {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #4caf50;
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%;
+    }
+    body{
+        background-size:auto;
+
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="">Social Media Dashboard</h1>
+
+        <!-- Login form -->
+        <div class="login-container" id="loginContainer">
+            <form class="login-form" onsubmit="login(event)">
+                <input type="text" class="form-control" placeholder="Username" id="username" required>
+                <input type="password" class="form-control" placeholder="Password" id="password" >
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+        </div>
+        
+        <!-- Feed containers -->
+        <div class="feed-container" id="feedsContainer" style="display: none;">
+            <div id="facebookFeed">
+                <h2>Facebook Feed</h2>
+                <div class="row" id="facebookPosts"></div>
+                <button onclick="fetchFacebookFeed()" class="btn btn-primary mt-3">Fetch Facebook Feed</button>
+            </div>
+
+            <div id="twitterFeed">
+                <h2>Twitter Feed</h2>
+                <div class="row" id="twitterPosts"></div>
+                <button onclick="fetchTwitterFeed()" class="btn btn-primary mt-3">Fetch Twitter Feed</button>
+            </div>
+
+            <div id="instagramFeed">
+                <h2>Instagram Feed</h2>
+                <div class="row" id="instagramPosts"></div>
+                <button onclick="fetchInstagramFeed()" class="btn btn-primary mt-3">Fetch Instagram Feed</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./app.js"></script>
+</body>
+
+</html>
